@@ -36,7 +36,7 @@ function RegisterForm() {
       if (error?.response?.data) {
         const { errors } = error.response.data;
         setResponseError(errors || {});
-        toast.error('Failed to add the user.');
+        toast.error('Failed to save customer data.');
       } else {
         toast.error('An error occurred while submitting the data.');
         console.error('Error submitting form:', error);

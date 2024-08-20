@@ -64,7 +64,6 @@ const CustomerForm = ({ customer }: Props) => {
         setResponseError(errors || {});
         toast.error('Failed to save customer data.');
       } else {
-        // If no specific error message is available, display a generic error
         toast.error('An error occurred while submitting the data.');
         console.error('Error submitting form:', error);
       }

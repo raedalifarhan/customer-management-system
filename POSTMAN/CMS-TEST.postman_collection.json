@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "f50ea1a3-00dc-461f-8132-eafdb784e37d",
+		"name": "CMS-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27482599"
+	},
+	"item": [
+		{
+			"name": "get customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiYjM1MzVlNDEtZjU3MS00YmVmLTk0MTAtOGRhOGIyZjA3YjkzIiwiTWFuYWdlciJdLCJuYmYiOjE3MjQxMDQyNDgsImV4cCI6MTcyNjY5NjI0OCwiaWF0IjoxNzI0MTA0MjQ4fQ.0Sjw2F4rOhK331rHj1MBDKQ1I0fnzZnHlDqPLgJJM3eVrMaluVJ23iglmbonkb3mn4e6eTRp_Tiyym27C-ccVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Customers?PageNumber=1&PageSize=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Customers"
+					],
+					"query": [
+						{
+							"key": "PageNumber",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"manage@rmanager.com\",\r\n  \"password\": \"Passw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Account/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get current user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiMmQ1M2Y0YmQtMTdkNS00MjYxLWFmZGMtNWVmMTQ1MThkYWQxIiwidGVzdCJdLCJuYmYiOjE3MjQxNzA2NTIsImV4cCI6MTcyNjc2MjY1MiwiaWF0IjoxNzI0MTcwNjUyfQ.A3C0M6QfcNg7YAiqXKzzsQwzK-KkWRL5f9__PmL96LjI7-TUUpRl1kEi_hm_B3-_sBkjSYXvl59AVJtYyrGrNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"manage@rmanager.com\",\r\n  \"password\": \"Passw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Account",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"displayName\": \"test\",\r\n    \"email\": \"manage@rmanager.com\",\r\n    \"password\": \"Passw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Account/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiMmQ1M2Y0YmQtMTdkNS00MjYxLWFmZGMtNWVmMTQ1MThkYWQxIiwidGVzdCJdLCJuYmYiOjE3MjQxODQwNjksImV4cCI6MTcyNjc3NjA2OSwiaWF0IjoxNzI0MTg0MDY5fQ.SuESnKYcaKvL9-RdcouJADbRQ3ln3T2HAg6vghW8kK44Ud1r5YrPlEs9hfpP8KY2WH5Kfj0NSc14ETlWKpw0Qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"ww\",\r\n  \"lastName\": \"ww\",\r\n  \"email\": \"ww\",\r\n  \"phone\": \"ww\",\r\n  \"address\": \"ww\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiYjM1MzVlNDEtZjU3MS00YmVmLTk0MTAtOGRhOGIyZjA3YjkzIiwiTWFuYWdlciJdLCJuYmYiOjE3MjQwNzU4NzIsImV4cCI6MTcyNjY2Nzg3MiwiaWF0IjoxNzI0MDc1ODcyfQ.f5i0HtwQ7XDc-V3ZB53thAQ0W2W69YB89H-rUTLVnFKPekvFt8xsuvNAhdyTB1yCjUJM28NJQ1uPPwd3nQBwYA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"update update\",\r\n  \"lastName\": \"update update\",\r\n  \"email\": \"string@d.d\",\r\n  \"phone\": \"string\",\r\n  \"address\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Customers/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOlsiYjM1MzVlNDEtZjU3MS00YmVmLTk0MTAtOGRhOGIyZjA3YjkzIiwiTWFuYWdlciJdLCJuYmYiOjE3MjQwNzU4NzIsImV4cCI6MTcyNjY2Nzg3MiwiaWF0IjoxNzI0MDc1ODcyfQ.f5i0HtwQ7XDc-V3ZB53thAQ0W2W69YB89H-rUTLVnFKPekvFt8xsuvNAhdyTB1yCjUJM28NJQ1uPPwd3nQBwYA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Customers/1005",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Customers",
+						"1005"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

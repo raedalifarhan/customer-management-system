@@ -16,12 +16,3 @@ export interface CustomerType {
   address: string;
 }
 
-
-export interface CustomerFormType {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  address: string;
-}
-
