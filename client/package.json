@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "concurrently \"dotnet watch run\" \"cd client && npm run dev\"",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@nextui-org/button": "^2.0.37",
+    "@nextui-org/input": "^2.2.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "axios": "^1.7.4",
+    "flowbite-react": "^0.7.2",
+    "next": "^14.2.5",
+    "react": "^18",
+    "react-datepicker": "^6.1.0",
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.2",
+    "react-hot-toast": "^2.4.1",
+    "react-icon": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-datepicker": "^4.19.6",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.4"
+  }
+}
